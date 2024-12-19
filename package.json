@@ -1,0 +1,31 @@
+{
+  "name": "naming-things-with-hashes",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "lib/naming-things-with-hashes.js",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./naming-things-with-hashes.ts",
+      "import": "./naming-things-with-hashes.ts"
+    },
+    "./rfc6920": {
+      "types": "./rfc6920.ts",
+      "import": "./rfc6920.ts"
+    }
+  },
+  "scripts": {
+    "test": "glob -c 'node --import tsx --test' '*.test.*'",
+    "tsc": "tsc --build",
+    "prepare": "npm run tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "glob": "^11.0.0",
+    "tsx": "^4.19.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gobengo/naming-things-with-hashes.git"
+  }
+}
