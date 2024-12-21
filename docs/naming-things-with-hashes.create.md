@@ -49,5 +49,5 @@ options
 </tbody></table>
 **Returns:**
 
-INamedInformationURI&lt;Algorithm&gt;
+[INamedInformationURI](./naming-things-with-hashes.inamedinformationuri.md)<!-- -->&lt;Algorithm&gt;
 

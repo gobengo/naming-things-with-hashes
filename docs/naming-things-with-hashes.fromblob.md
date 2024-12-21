@@ -49,5 +49,5 @@ options
 </tbody></table>
 **Returns:**
 
-Promise&lt;NamedInformationURI&lt;Algorithm, \`${string}/${string}\`&gt;&gt;
+Promise&lt;[NamedInformationURI](./naming-things-with-hashes.namedinformationuri.md)<!-- -->&lt;Algorithm, \`${string}/${string}\`&gt;&gt;
 

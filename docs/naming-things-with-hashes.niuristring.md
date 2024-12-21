@@ -9,5 +9,5 @@
 ```typescript
 export type NiUriString<Alg extends NiAlgorithm = NiAlgorithm> = `ni://${NiAuthority}/${NiAlgorithm};${NiHashB64Url}${'' | `?ct=${NiMediaType}`}`;
 ```
-**References:** [NiAlgorithm](./naming-things-with-hashes.nialgorithm.md)
+**References:** [NiAlgorithm](./naming-things-with-hashes.nialgorithm.md)<!-- -->, [NiAuthority](./naming-things-with-hashes.niauthority.md)<!-- -->, [NiHashB64Url](./naming-things-with-hashes.nihashb64url.md)<!-- -->, [NiMediaType](./naming-things-with-hashes.nimediatype.md)
 

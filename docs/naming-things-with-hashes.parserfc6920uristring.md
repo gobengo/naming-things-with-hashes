@@ -45,5 +45,5 @@ string
 </tbody></table>
 **Returns:**
 
-NamedInformationURI&lt;string, \`${string}/${string}\` \| null&gt;
+[NamedInformationURI](./naming-things-with-hashes.namedinformationuri.md)<!-- -->&lt;string, \`${string}/${string}\` \| null&gt;
 

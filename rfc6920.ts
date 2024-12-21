@@ -139,10 +139,10 @@ export function decodeFilePathSegment(segment: string): INamedInformationURI {
   })
 }
 
-type NiAuthority = '' | string
+export type NiAuthority = '' | string
 export type NiAlgorithm = string
-type NiHashB64Url = string
-type NiMediaType = string // dont be too strict
+export type NiHashB64Url = string
+export type NiMediaType = string // dont be too strict
 export type NiUriString<Alg extends NiAlgorithm=NiAlgorithm> = `ni://${NiAuthority}/${NiAlgorithm};${NiHashB64Url}${''|`?ct=${NiMediaType}`}`
 
 export function isRFC6920Uri<Alg extends NiAlgorithm>(value: unknown): value is NiUriString<Alg> {

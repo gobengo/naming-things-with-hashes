@@ -37,7 +37,7 @@ hash
 
 </td><td>
 
-INamedInformationURI
+[INamedInformationURI](./naming-things-with-hashes.inamedinformationuri.md)
 
 
 </td><td>

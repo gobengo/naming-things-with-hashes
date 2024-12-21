@@ -4,10 +4,6 @@
 
 ```ts
 
-// Warning: (ae-forgotten-export) The symbol "HashAlgorithm" needs to be exported by the entry point naming-things-with-hashes.d.ts
-// Warning: (ae-forgotten-export) The symbol "MimeType" needs to be exported by the entry point naming-things-with-hashes.d.ts
-// Warning: (ae-forgotten-export) The symbol "INamedInformationURI" needs to be exported by the entry point naming-things-with-hashes.d.ts
-//
 // @public (undocumented)
 export function create<Algorithm extends HashAlgorithm, ContentType extends MimeType | null>(options: {
     algorithm: Algorithm;
@@ -20,8 +16,6 @@ export function filePathSegment(ni: INamedInformationURI, options: {
     contentType: boolean;
 }): string;
 
-// Warning: (ae-forgotten-export) The symbol "NamedInformationURI" needs to be exported by the entry point naming-things-with-hashes.d.ts
-//
 // @public (undocumented)
 export function fromBlob<Algorithm extends HashAlgorithm>(options: {
     algorithm: Algorithm;
@@ -38,15 +32,67 @@ export function fromData<Algorithm extends HashAlgorithm, ContentType extends Nu
 }): Promise<NamedInformationURI<Algorithm, ContentType>>;
 
 // @public (undocumented)
+export type HashAlgorithm = Parameters<typeof globalThis.crypto.subtle.digest>[0];
+
+// @public (undocumented)
+export interface INamedInformationURI<Algorithm extends HashAlgorithm = HashAlgorithm, ContentType extends Nullable<MimeType> = null | MimeType> {
+    // (undocumented)
+    readonly algorithm: Algorithm;
+    // (undocumented)
+    readonly contentType: ContentType;
+    // (undocumented)
+    readonly formattedAlgorithm: string;
+    // (undocumented)
+    readonly formattedHash: string;
+    // (undocumented)
+    readonly hash: ArrayBuffer;
+    // (undocumented)
+    readonly query: string | undefined;
+    // (undocumented)
+    toString(): NiUriString;
+}
+
+// @public (undocumented)
 export function isRFC6920Uri<Alg extends NiAlgorithm>(value: unknown): value is NiUriString<Alg>;
+
+// @public (undocumented)
+export type MimeType = `${string}/${string}`;
+
+// @public
+export class NamedInformationURI<Algorithm extends HashAlgorithm = HashAlgorithm, ContentType extends MimeType | null = null | MimeType> implements INamedInformationURI<Algorithm> {
+    constructor(options: {
+        algorithm: Algorithm;
+        hash: ArrayBuffer;
+        contentType: ContentType;
+    });
+    // (undocumented)
+    readonly algorithm: Algorithm;
+    // (undocumented)
+    readonly contentType: ContentType;
+    // (undocumented)
+    readonly formattedAlgorithm: string;
+    // (undocumented)
+    readonly formattedHash: string;
+    // (undocumented)
+    readonly hash: ArrayBuffer;
+    // (undocumented)
+    readonly query: string | undefined;
+    // (undocumented)
+    toString(): `ni://${string}/${string};${string}`;
+}
 
 // @public (undocumented)
 export type NiAlgorithm = string;
 
-// Warning: (ae-forgotten-export) The symbol "NiAuthority" needs to be exported by the entry point naming-things-with-hashes.d.ts
-// Warning: (ae-forgotten-export) The symbol "NiHashB64Url" needs to be exported by the entry point naming-things-with-hashes.d.ts
-// Warning: (ae-forgotten-export) The symbol "NiMediaType" needs to be exported by the entry point naming-things-with-hashes.d.ts
-//
+// @public (undocumented)
+export type NiAuthority = '' | string;
+
+// @public (undocumented)
+export type NiHashB64Url = string;
+
+// @public (undocumented)
+export type NiMediaType = string;
+
 // @public (undocumented)
 export type NiUriString<Alg extends NiAlgorithm = NiAlgorithm> = `ni://${NiAuthority}/${NiAlgorithm};${NiHashB64Url}${'' | `?ct=${NiMediaType}`}`;
 

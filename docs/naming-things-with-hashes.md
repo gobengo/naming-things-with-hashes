@@ -4,6 +4,32 @@
 
 ## naming-things-with-hashes package
 
+## Classes
+
+<table><thead><tr><th>
+
+Class
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[NamedInformationURI](./naming-things-with-hashes.namedinformationuri.md)
+
+
+</td><td>
+
+a 'ni:…' URI as defined in RFC 6920: Naming Things with Hashes
+
+
+</td></tr>
+</tbody></table>
+
 ## Functions
 
 <table><thead><tr><th>
@@ -88,6 +114,30 @@ tests a ni against some blob. return true iff the ni is the hashname of the blob
 </td></tr>
 </tbody></table>
 
+## Interfaces
+
+<table><thead><tr><th>
+
+Interface
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[INamedInformationURI](./naming-things-with-hashes.inamedinformationuri.md)
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+
 ## Variables
 
 <table><thead><tr><th>
@@ -127,7 +177,52 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
+[HashAlgorithm](./naming-things-with-hashes.hashalgorithm.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[MimeType](./naming-things-with-hashes.mimetype.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
 [NiAlgorithm](./naming-things-with-hashes.nialgorithm.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[NiAuthority](./naming-things-with-hashes.niauthority.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[NiHashB64Url](./naming-things-with-hashes.nihashb64url.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[NiMediaType](./naming-things-with-hashes.nimediatype.md)
 
 
 </td><td>
