@@ -15,6 +15,7 @@
     }
   },
   "scripts": {
+    "build:docs": "api-documenter markdown --input-folder temp --output-folder docs",
     "test": "glob -c 'node --import tsx --test' '*.test.*'",
     "tsc": "tsc --build",
     "prepare": "npm run tsc"

@@ -1,2 +1,5 @@
+/dist
 /lib
 /node_modules
+/temp
+tsdoc-metadata.json
