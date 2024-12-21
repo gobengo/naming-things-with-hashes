@@ -4,7 +4,49 @@
 
 ```ts
 
-/// <reference types="node" />
+// Warning: (ae-forgotten-export) The symbol "HashAlgorithm" needs to be exported by the entry point naming-things-with-hashes.d.ts
+// Warning: (ae-forgotten-export) The symbol "MimeType" needs to be exported by the entry point naming-things-with-hashes.d.ts
+// Warning: (ae-forgotten-export) The symbol "INamedInformationURI" needs to be exported by the entry point naming-things-with-hashes.d.ts
+//
+// @public (undocumented)
+export function create<Algorithm extends HashAlgorithm, ContentType extends MimeType | null>(options: {
+    algorithm: Algorithm;
+    hash: ArrayBuffer;
+    contentType: ContentType;
+}): INamedInformationURI<Algorithm>;
+
+// @public
+export function filePathSegment(ni: INamedInformationURI, options: {
+    contentType: boolean;
+}): string;
+
+// Warning: (ae-forgotten-export) The symbol "NamedInformationURI" needs to be exported by the entry point naming-things-with-hashes.d.ts
+//
+// @public (undocumented)
+export function fromBlob<Algorithm extends HashAlgorithm>(options: {
+    algorithm: Algorithm;
+    blob: Blob;
+    subtleCrypto?: Pick<typeof globalThis.crypto.subtle, 'digest'>;
+}): Promise<NamedInformationURI<Algorithm, `${string}/${string}`>>;
+
+// Warning: (ae-forgotten-export) The symbol "Nullable" needs to be exported by the entry point naming-things-with-hashes.d.ts
+//
+// @public
+export function fromData<Algorithm extends HashAlgorithm, ContentType extends Nullable<MimeType>>(options: {
+    algorithm: Algorithm;
+    data: ArrayBuffer | DataView | Uint8Array;
+    contentType: ContentType;
+    subtleCrypto?: Pick<typeof globalThis.crypto.subtle, 'digest'>;
+}): Promise<NamedInformationURI<Algorithm, ContentType>>;
+
+// Warning: (ae-forgotten-export) The symbol "NiAlgorithm" needs to be exported by the entry point naming-things-with-hashes.d.ts
+// Warning: (ae-forgotten-export) The symbol "NiUriString" needs to be exported by the entry point naming-things-with-hashes.d.ts
+//
+// @public (undocumented)
+export function isRFC6920Uri<Alg extends NiAlgorithm>(value: unknown): value is NiUriString<Alg>;
+
+// @public (undocumented)
+export function parseRFC6920UriString(value: string): NamedInformationURI<string, `${string}/${string}` | null>;
 
 // @public (undocumented)
 export const rfc6920: {
@@ -17,15 +59,8 @@ export const rfc6920: {
     test: typeof test;
 };
 
-// Warnings were encountered during analysis:
-//
-// rfc6920.ts:186:14 - (ae-forgotten-export) The symbol "create" needs to be exported by the entry point naming-things-with-hashes.d.ts
-// rfc6920.ts:186:14 - (ae-forgotten-export) The symbol "fromBlob" needs to be exported by the entry point naming-things-with-hashes.d.ts
-// rfc6920.ts:186:14 - (ae-forgotten-export) The symbol "fromData" needs to be exported by the entry point naming-things-with-hashes.d.ts
-// rfc6920.ts:186:14 - (ae-forgotten-export) The symbol "filePathSegment" needs to be exported by the entry point naming-things-with-hashes.d.ts
-// rfc6920.ts:186:14 - (ae-forgotten-export) The symbol "isRFC6920Uri" needs to be exported by the entry point naming-things-with-hashes.d.ts
-// rfc6920.ts:186:14 - (ae-forgotten-export) The symbol "parseRFC6920UriString" needs to be exported by the entry point naming-things-with-hashes.d.ts
-// rfc6920.ts:186:14 - (ae-forgotten-export) The symbol "test" needs to be exported by the entry point naming-things-with-hashes.d.ts
+// @public
+export function test(hash: INamedInformationURI, data: Blob): Promise<boolean>;
 
 // (No @packageDocumentation comment for this package)
 

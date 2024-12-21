@@ -4,6 +4,90 @@
 
 ## naming-things-with-hashes package
 
+## Functions
+
+<table><thead><tr><th>
+
+Function
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[create(options)](./naming-things-with-hashes.create.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[filePathSegment(ni, options)](./naming-things-with-hashes.filepathsegment.md)
+
+
+</td><td>
+
+serialize a file path segment for the NamedInformationURI. i.e. strip off 'ni:///'
+
+
+</td></tr>
+<tr><td>
+
+[fromBlob(options)](./naming-things-with-hashes.fromblob.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[fromData(options)](./naming-things-with-hashes.fromdata.md)
+
+
+</td><td>
+
+construct a NamedInformationURI object from input data. hashing is async.
+
+
+</td></tr>
+<tr><td>
+
+[isRFC6920Uri(value)](./naming-things-with-hashes.isrfc6920uri.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[parseRFC6920UriString(value)](./naming-things-with-hashes.parserfc6920uristring.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[test(hash, data)](./naming-things-with-hashes.test.md)
+
+
+</td><td>
+
+tests a ni against some blob. return true iff the ni is the hashname of the blob
+
+
+</td></tr>
+</tbody></table>
+
 ## Variables
 
 <table><thead><tr><th>

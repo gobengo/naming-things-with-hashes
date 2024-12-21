@@ -175,7 +175,7 @@ export function parseRFC6920UriString(value: string) {
  * tests a ni against some blob.
  * return true iff the ni is the hashname of the blob
  */
-async function test(hash: INamedInformationURI, data: Blob) {
+export async function test(hash: INamedInformationURI, data: Blob) {
   const dataNi = await fromBlob({
     algorithm: hash.algorithm,
     blob: data,
