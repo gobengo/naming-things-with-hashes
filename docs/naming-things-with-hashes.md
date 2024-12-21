@@ -111,3 +111,45 @@ Description
 
 </td></tr>
 </tbody></table>
+
+## Type Aliases
+
+<table><thead><tr><th>
+
+Type Alias
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[NiAlgorithm](./naming-things-with-hashes.nialgorithm.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[NiUriString](./naming-things-with-hashes.niuristring.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[Nullable](./naming-things-with-hashes.nullable.md)
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

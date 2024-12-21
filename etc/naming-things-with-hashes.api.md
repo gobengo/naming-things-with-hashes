@@ -29,8 +29,6 @@ export function fromBlob<Algorithm extends HashAlgorithm>(options: {
     subtleCrypto?: Pick<typeof globalThis.crypto.subtle, 'digest'>;
 }): Promise<NamedInformationURI<Algorithm, `${string}/${string}`>>;
 
-// Warning: (ae-forgotten-export) The symbol "Nullable" needs to be exported by the entry point naming-things-with-hashes.d.ts
-//
 // @public
 export function fromData<Algorithm extends HashAlgorithm, ContentType extends Nullable<MimeType>>(options: {
     algorithm: Algorithm;
@@ -39,11 +37,21 @@ export function fromData<Algorithm extends HashAlgorithm, ContentType extends Nu
     subtleCrypto?: Pick<typeof globalThis.crypto.subtle, 'digest'>;
 }): Promise<NamedInformationURI<Algorithm, ContentType>>;
 
-// Warning: (ae-forgotten-export) The symbol "NiAlgorithm" needs to be exported by the entry point naming-things-with-hashes.d.ts
-// Warning: (ae-forgotten-export) The symbol "NiUriString" needs to be exported by the entry point naming-things-with-hashes.d.ts
-//
 // @public (undocumented)
 export function isRFC6920Uri<Alg extends NiAlgorithm>(value: unknown): value is NiUriString<Alg>;
+
+// @public (undocumented)
+export type NiAlgorithm = string;
+
+// Warning: (ae-forgotten-export) The symbol "NiAuthority" needs to be exported by the entry point naming-things-with-hashes.d.ts
+// Warning: (ae-forgotten-export) The symbol "NiHashB64Url" needs to be exported by the entry point naming-things-with-hashes.d.ts
+// Warning: (ae-forgotten-export) The symbol "NiMediaType" needs to be exported by the entry point naming-things-with-hashes.d.ts
+//
+// @public (undocumented)
+export type NiUriString<Alg extends NiAlgorithm = NiAlgorithm> = `ni://${NiAuthority}/${NiAlgorithm};${NiHashB64Url}${'' | `?ct=${NiMediaType}`}`;
+
+// @public (undocumented)
+export type Nullable<T> = T | null;
 
 // @public (undocumented)
 export function parseRFC6920UriString(value: string): NamedInformationURI<string, `${string}/${string}` | null>;

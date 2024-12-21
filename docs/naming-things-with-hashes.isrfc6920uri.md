@@ -45,5 +45,5 @@ unknown
 </tbody></table>
 **Returns:**
 
-value is NiUriString&lt;Alg&gt;
+value is [NiUriString](./naming-things-with-hashes.niuristring.md)<!-- -->&lt;Alg&gt;
 

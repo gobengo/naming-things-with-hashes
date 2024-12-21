@@ -22,12 +22,12 @@ export interface INamedInformationURI<
   toString(): NiUriString  
 }
 
-type Nullable<T> = T | null;
+export type Nullable<T> = T | null;
 
 /**
  * a 'ni:…' URI as defined in RFC 6920: Naming Things with Hashes
  */
-class NamedInformationURI<
+export class NamedInformationURI<
   Algorithm extends HashAlgorithm = HashAlgorithm,
   ContentType extends MimeType | null = null|MimeType,
 > implements INamedInformationURI<Algorithm> {
@@ -140,7 +140,7 @@ export function decodeFilePathSegment(segment: string): INamedInformationURI {
 }
 
 type NiAuthority = '' | string
-type NiAlgorithm = string
+export type NiAlgorithm = string
 type NiHashB64Url = string
 type NiMediaType = string // dont be too strict
 export type NiUriString<Alg extends NiAlgorithm=NiAlgorithm> = `ni://${NiAuthority}/${NiAlgorithm};${NiHashB64Url}${''|`?ct=${NiMediaType}`}`
