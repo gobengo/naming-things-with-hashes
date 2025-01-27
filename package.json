@@ -7,11 +7,11 @@
   "exports": {
     ".": {
       "types": "./naming-things-with-hashes.ts",
-      "import": "./naming-things-with-hashes.ts"
+      "import": "./lib/naming-things-with-hashes.js"
     },
     "./rfc6920": {
       "types": "./rfc6920.ts",
-      "import": "./rfc6920.ts"
+      "import": "./lib/rfc6920.js"
     }
   },
   "scripts": {
