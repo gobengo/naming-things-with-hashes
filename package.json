@@ -6,11 +6,11 @@
   "license": "MIT",
   "exports": {
     ".": {
-      "types": "./naming-things-with-hashes.ts",
+      "types": "./lib/naming-things-with-hashes.d.ts",
       "import": "./lib/naming-things-with-hashes.js"
     },
     "./rfc6920": {
-      "types": "./rfc6920.ts",
+      "types": "./lib/rfc6920.d.ts",
       "import": "./lib/rfc6920.js"
     }
   },
@@ -21,7 +21,6 @@
     "prepare": "npm run tsc"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
     "glob": "^11.0.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
