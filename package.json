@@ -21,6 +21,7 @@
     "prepare": "npm run tsc"
   },
   "devDependencies": {
+    "@types/node": "^25.3.3",
     "glob": "^11.0.0",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"

@@ -92,7 +92,7 @@ export async function fromData
 }): Promise<NamedInformationURI<Algorithm, ContentType>> {
   const subtleCrypto = options.subtleCrypto || globalThis.crypto.subtle
   if ( ! subtleCrypto) throw new Error(`unable to find WebCrypto subtle api`)
-  const hash = await subtleCrypto.digest(options.algorithm, options.data)
+  const hash = await subtleCrypto.digest(options.algorithm, options.data as any)
   return new NamedInformationURI({
     ...options,
     hash,
